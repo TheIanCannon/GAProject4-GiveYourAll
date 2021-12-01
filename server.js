@@ -16,7 +16,10 @@ app.use(express.json());
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
+
+// Check if token and create req.user
 app.use(require('./config/checkToken'));
+
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
 
