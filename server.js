@@ -2,22 +2,9 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-
 require('dotenv').config();
 require('./config/database');
-
 const app = express();
-
-// Fetch & Consume API with this
-const fetch = require('node-fetch');
-const token = process.env.GITHUB_TOKEN;
-const rootURL = 'http://api.charitynavigator.org/';
-// GET consumed API search result with THIS
-router.get('/', function(req, res, next) {
-    const username = req.query.username;
-    console.log(`username: ${username}`);
-    res.render('index');
-});
 
 app.use(logger('dev'));
 // there's no need to mount express.urlencoded middleware
@@ -33,6 +20,7 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/charitysearch', require('./routes/api/charitysearch'));
 
 
 // The following "catch all" route (note the *) is necessary

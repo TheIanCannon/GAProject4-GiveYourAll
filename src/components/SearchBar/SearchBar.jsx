@@ -7,7 +7,7 @@ return(
     <form action="/" method="GET">
       <div className="input-group">
         <input type="text" name="charityAPI" className="form-control"
-          placeholder="Search for Charities"/>
+          placeholder="Search for a Charity"/>
         <span className="input-group-btn">
           <button className="btn btn-success" type="submit">Search</button>
         </span>
