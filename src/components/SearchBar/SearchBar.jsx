@@ -8,7 +8,6 @@ export default function SearchBar({setCharities}){
 				const searchResults = await charityAPI.search(searchTerm);
 				setCharities(searchResults);
 		}
-
 		return(
 				<div className="row">
 						<div className="col-xs-6 col-xs-offset-6">
