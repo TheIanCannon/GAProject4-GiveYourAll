@@ -9,7 +9,7 @@ import CharityListPage from '../CharityListPage/CharityListPage';
 
 export default function App() {
     const [user, setUser] = useState(getUser());
-				return ( < main className = "App" > {
+    return ( < main className = "App" > {
             user ? < >
             <NavBar user = { user } setUser = { setUser }/>  
 												<Routes > 
@@ -19,5 +19,5 @@ export default function App() {
 												: 
 												<AuthPage setUser = { setUser }/>}  
 												</main>
-        );
-    }
+    );
+}
