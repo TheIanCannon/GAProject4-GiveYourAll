@@ -5,8 +5,8 @@ export default function SearchResults({charities}){
 		return(
 				<div className="SearchResults">
 						<ul className="EachResult">
-								{charities.map(charity => (
-										<SearchResultsItem charity={charity}/>
+								{charities.map((charity, key) => (
+										<SearchResultsItem charity={charity} key={key}/>
 								))} 
 						</ul>
 			</div>
