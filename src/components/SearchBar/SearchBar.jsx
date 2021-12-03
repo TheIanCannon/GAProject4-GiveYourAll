@@ -14,7 +14,7 @@ export default function SearchBar({setCharities}){
 								<form onSubmit={handleSubmit}>
 										<div className="input-group">
 												<input type="text" className="form-control" 
-														placeholder="Find a Charity" value={searchTerm} onChange={(evt) => setSearchTerm(evt.target.value)}/>
+														placeholder="Search" value={searchTerm} onChange={(evt) => setSearchTerm(evt.target.value)}/>
 												<span className="input-group-btn">
 														<button className="btn btn-success" type="submit">Search</button>
 												</span>
