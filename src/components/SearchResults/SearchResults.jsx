@@ -1,17 +1,14 @@
 import React from 'react';
-import SearchResultsItem from '../SearchResultsItem/SearchResultsItem';
+import SearchResultsItem from "../SearchResultsItem/SearchResultsItem";
 
-export default function searchResults({charities}){
-		const searchItems = charities.map(charity =>
-				<SearchResultsItem
-						key={charity}			
-						charity={charity}
-				/>
-  );
-
+export default function SearchResults({charities}){
 		return(
-				<div className="CharitiesList">
-						{searchItems}
-				</div>
+				<div className="SearchResults">
+						<ul className="EachResult">
+								{charities.map(charity => (
+										<SearchResultsItem charity={charity}/>
+								))} 
+						</ul>
+			</div>
 		);
 }
