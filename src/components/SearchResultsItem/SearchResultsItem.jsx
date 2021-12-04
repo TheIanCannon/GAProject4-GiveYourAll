@@ -5,9 +5,8 @@ export default function SearchResultsItem({charity}){
   return(
    <div className="SearchResultsItem">
      <Link to={`/charities/${charity.charityEIN}`}>
-       <h4 className="CharityName">{charity.charityName}</h4>
-       <h5>{charity.charityCause}</h5>
-       <h5>{charity.charityRating}</h5>
+       <span className="CharityName">{charity.charityName}</span>
+							<br/><br/>
      </Link>
    </div>
   );

@@ -5,6 +5,7 @@ import './App.css';
 
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import CharityListPage from '../CharityListPage/CharityListPage';
 import CharityDetailPage from '../CharityDetailPage/CharityDetailPage';
 
@@ -13,7 +14,7 @@ export default function App() {
 		const [charities, setCharities] = useState([]);
 		return ( < main className = "App" > {
     user ? < >
-      <NavBar user = { user } setUser = { setUser }/>  
+      <NavBar user = { user } setUser = { setUser }/>
 						<Routes > 
 								<Route path="/" element={<CharityListPage setCharities={setCharities} charities={charities}/>}/>
 								<Route path="/charities/:ein" element={<CharityDetailPage setCharities={setCharities} charities={charities}/>}/>
