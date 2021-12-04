@@ -6,6 +6,7 @@ import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import CharityListPage from '../CharityListPage/CharityListPage';
+import CharityDetailPage from '../CharityDetailPage/CharityDetailPage';
 
 export default function App() {
     const [user, setUser] = useState(getUser());
@@ -14,6 +15,7 @@ export default function App() {
             <NavBar user = { user } setUser = { setUser }/>  
 												<Routes > 
 														<Route path="/" element={<CharityListPage/>}/>
+														<Route path="/:apiId" element={<CharityDetailPage/>}/>
 												</Routes> 
 												</> 
 												: 
