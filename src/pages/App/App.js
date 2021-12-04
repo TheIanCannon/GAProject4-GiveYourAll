@@ -16,7 +16,7 @@ export default function App() {
       <NavBar user = { user } setUser = { setUser }/>  
 						<Routes > 
 								<Route path="/" element={<CharityListPage setCharities={setCharities} charities={charities}/>}/>
-								<Route path="/:apiId" element={<CharityDetailPage setCharities={setCharities} charities={charities}/>}/>
+								<Route path="/charities/:ein" element={<CharityDetailPage setCharities={setCharities} charities={charities}/>}/>
 						</Routes> 
 						</> 
 						: 
