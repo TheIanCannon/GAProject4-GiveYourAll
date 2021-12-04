@@ -9,17 +9,18 @@ import CharityListPage from '../CharityListPage/CharityListPage';
 import CharityDetailPage from '../CharityDetailPage/CharityDetailPage';
 
 export default function App() {
-    const [user, setUser] = useState(getUser());
-				return ( < main className = "App" > {
-            user ? < >
-            <NavBar user = { user } setUser = { setUser }/>  
-												<Routes > 
-														<Route path="/" element={<CharityListPage/>}/>
-														<Route path="/:apiId" element={<CharityDetailPage/>}/>
-												</Routes> 
-												</> 
-												: 
-												<AuthPage setUser = { setUser }/>}  
-												</main>
-        );
-    }
+  const [user, setUser] = useState(getUser());
+		const [charities, setCharities] = useState([]);
+		return ( < main className = "App" > {
+    user ? < >
+      <NavBar user = { user } setUser = { setUser }/>  
+						<Routes > 
+								<Route path="/" element={<CharityListPage setCharities={setCharities} charities={charities}/>}/>
+								<Route path="/:apiId" element={<CharityDetailPage setCharities={setCharities} charities={charities}/>}/>
+						</Routes> 
+						</> 
+						: 
+						<AuthPage setUser = { setUser }/>}  
+						</main>
+  );
+}

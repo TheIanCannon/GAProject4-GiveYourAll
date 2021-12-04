@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function CharityDetailPage({charity}){
+export default function CharityDetailPage({charities}){
 		const { charityId } = useParams();
-		charity.find((c) => c.charityName === charityId);
+		let charity = charities.find((c) => c.charityId === charityId);
 		return(
 				<div className="CharityDetail">
 						<h4>{charity.charityName}</h4>

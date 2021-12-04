@@ -2,8 +2,7 @@ import {useState} from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import SearchResults from '../../components/SearchResults/SearchResults';
 
-export default function CharityListPage(){
-		const [charities, setCharities] = useState([]);
+export default function CharityListPage({charities, setCharities}){
 		return(
 				<>
 						<SearchBar charities={charities}  setCharities={setCharities}/>
