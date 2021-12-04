@@ -7,6 +7,7 @@ const charitySchema = new Schema({
 		cause: {type: String},
 		mission: {type: String},
 		url: {type: String},
+		ein: {type: String},
 });
 
 module.exports = mongoose.model('Charity', charitySchema);

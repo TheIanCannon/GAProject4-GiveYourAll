@@ -16,6 +16,7 @@ async function charitySearch(req, res) {
 								charityCause: r.cause && r.cause.causeName,
 								charityMission: r.mission,
 								charityURL: r.websiteURL,
+								charityEIN: r.ein,
     }))
     res.json(results);
 }
