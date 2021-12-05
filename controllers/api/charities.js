@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const appId = process.env.APP_ID;
 const appKey = process.env.APP_KEY;
+const Charity = require('../../models/charity');
 
 
 module.exports = {
