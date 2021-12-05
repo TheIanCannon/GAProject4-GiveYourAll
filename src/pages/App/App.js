@@ -13,9 +13,9 @@ export default function App() {
   const [user, setUser] = useState(getUser());
 		const [charities, setCharities] = useState([]);
 		return ( < main className = "App" > {
-    user ? < >
+    user ? <>
       <NavBar user = { user } setUser = { setUser }/>
-						<Routes > 
+						<Routes> 
 								<Route path="/" element={<CharityListPage setCharities={setCharities} charities={charities}/>}/>
 								<Route path="/charities/:ein" element={<CharityDetailPage setCharities={setCharities} charities={charities}/>}/>
 						</Routes> 

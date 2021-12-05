@@ -20,7 +20,7 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/charitysearch', require('./routes/api/charitysearch'));
+app.use('/api/charities', require('./routes/api/charities'));
 
 
 // The following "catch all" route (note the *) is necessary

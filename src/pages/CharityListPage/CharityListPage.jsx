@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import SearchResults from '../../components/SearchResults/SearchResults';
 
