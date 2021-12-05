@@ -29,7 +29,7 @@ async function charityGet(req, res){
 		// no charity in db? create one w model
 		const url = `https://api.data.charitynavigator.org/v2/Organizations/?app_key=${appKey}&app_id=${appId}&search=${req.query.ein}&format=json`;
 		const result = await fetch(url).then((res)=>res.json());
-		charity = await Charity.create({
+		charity = await Charity.create(result, {
 				charityName: {type: String, require: true},
 				charityRating: {type: Number},
 				charityCause: {type: String},
