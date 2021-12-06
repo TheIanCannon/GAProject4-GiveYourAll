@@ -1,12 +1,12 @@
 const Schema = require('mongoose').Schema;
 
 const charitySchema = new Schema({
-		charityName: {type: String, require: true},
-		charityRating: {type: Number},
-		charityCause: {type: String},
-		charityMission: {type: String},
-		charityURL: {type: String},
-		charityEIN: {type: String, require: true},
+		name: {type: String, required: true},
+		rating: {type: Number},
+		cause: {type: String},
+		mission: {type: String},
+		URL: {type: String},
+		EIN: {type: String, required: true},
   },{
 		timestamps: true
 });

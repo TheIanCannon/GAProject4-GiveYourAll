@@ -7,9 +7,11 @@ export default function SearchBar({setCharities}){
 
 		async function handleSubmit(evt){
 				evt.preventDefault();
-				const searchResults = await charityAPI.search(searchTerm);
+				let searchResults = await charityAPI.search(searchTerm);
+				searchResults=searchResults.filter((r)=>r.mission);
 				setCharities(searchResults);
 		}
+
 		return(
 				<div className="row">
 						<div className="col-xs-6 col-xs-offset-6">
