@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const fetch = require('node-fetch');
 const appId = process.env.APP_ID;
 const appKey = process.env.APP_KEY;
@@ -18,6 +19,7 @@ async function charitySearch(req, res) {
 								mission: r.mission,
 								URL: r.websiteURL,
 								EIN: r.ein,
+								users: [{type:mongoose.Schema.Types.ObjectId, ref: 'User'}],
     }))
     res.json(results);
 }
