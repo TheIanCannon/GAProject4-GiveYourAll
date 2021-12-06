@@ -1,15 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import * as charityAPI from '../../utilities/charities-api';
 
 export default function CharityDetailPage({charities}){
+		const [donateItem, setDonateItem] = useState([]);
 		const { ein } = useParams();
 		const charity = charities.find((c) => c.charityEIN === ein);
+		console.log(charity);
+			
+ useEffect(function(){
+  		async function getCharity(){
+  				const charity = await charityAPI.charityGet();
+ 					setDonateItem(charity);
+  		}
+ 			getCharity();
+ },[]);
 
-		useEffect(() => {
-				charityGet(charity);
-				
-		});
-		
 		return(
 				<div className="CharityDetailPageItem">
 						<h4>{charity.charityName}</h4>
@@ -17,7 +23,7 @@ export default function CharityDetailPage({charities}){
 						<h5>Rating: {charity.charityRating}</h5>
 						<h5>Mission: {charity.charityMission}</h5>
 						<h5>Website: {charity.charityURL}</h5>
-						<button className="btn-sm" onClick={() => console.log('test')}>
+						<button className="btn-sm" onClick={() => console.log(`${ein}`)}>
 								Add
 						</button>
 				</div>

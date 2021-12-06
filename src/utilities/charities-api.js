@@ -1,4 +1,5 @@
 import { getToken } from './users-service';
+
 const BASE_URL="/api/charities";
 
 export function search(term){

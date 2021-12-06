@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import * as charityAPI from "../../utilities/charities-api";
 
 export default function SearchBar({setCharities}){
+
 		const [searchTerm, setSearchTerm] = useState("");
+
 		async function handleSubmit(evt){
 				evt.preventDefault();
 				const searchResults = await charityAPI.search(searchTerm);

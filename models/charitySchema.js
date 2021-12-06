@@ -1,4 +1,4 @@
-const Schema = mongoose.Schema;
+const Schema = require('mongoose').Schema;
 
 const charitySchema = new Schema({
 		charityName: {type: String, require: true},
