@@ -2,6 +2,10 @@ import { getToken } from './users-service';
 
 const BASE_URL="/api/charities";
 
+export function addCharToDB() {
+	return sendRequest(BASE_URL);
+}
+
 export function search(term){
 		return sendRequest(`${BASE_URL}?search=${term}`);
 }

@@ -10,10 +10,11 @@ export default function CharityDetailPage({charities}){
 			
  useEffect(function(){
   		async function getCharity(){
-  				const charity = await charityAPI.charityGet();
- 					setDonateItem(charity);
+  				const char = await charityAPI.addCharToDB();
+ 					setDonateItem(char);
+
   		}
- 			getCharity();
+ 			getCharity(charity);
  },[]);
 
 		return(
