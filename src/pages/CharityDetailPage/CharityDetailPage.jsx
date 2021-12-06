@@ -6,14 +6,12 @@ export default function CharityDetailPage({charities}){
 		const [donateItem, setDonateItem] = useState([]);
 		const { ein } = useParams();
 		const charity = charities.find((c) => c.charityEIN === ein);
-		console.log(charity);
 			
  useEffect(function(){
   		async function getCharity(){
   				const char = await charityAPI.addCharToDB();
  					setDonateItem(char);
-
-  		}
+				}
  			getCharity(charity);
  },[]);
 
