@@ -12,12 +12,13 @@ export default function NavBar({NewDonationPage, DonationHistoryPage, user, setU
 		}
 
   return (
-    <nav>
-						<span>Welcome, {user.name}</span>
-      <Link to="" onClick={()=>handleLogOut()}>Log Out</Link>
-			   <Link to="" onClick={() =>setShowDonation(!showDonation)}>{showDonation ? 'Make A Donation': 'See Your Giving'}
-      {showDonation ? <NewDonationPage user={user} setUser={setUser}/> : <DonationHistoryPage user={user} setUser={setUser} />}></Link>
-    </nav>
+    <div>
+						<span>Welcome, {user.name}</span>&nbsp;|&nbsp;
+			   <Link to="/orders/new" className="button btm-sm">Make a Donation</Link>&nbsp;|&nbsp;
+			   <Link to="/orders" className="button btm-sm">See Your Giving</Link>&nbsp;|&nbsp;
+      <Link to="" onClick={()=> handleLogOut()}>Log Out</Link>&nbsp;|&nbsp;
+      
+    </div>
   );
 
 }

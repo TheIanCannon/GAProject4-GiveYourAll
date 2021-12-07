@@ -24,7 +24,7 @@ donationSchema.virtual('donationTotal').get(function() {
 });
 
 donationSchema.virtual('totalAmount').get(function() {
-  return this.donationItems.reduce((total, donationItem) => total + donationItem.amt, 0);
+  return this.donationItems.reduce((total, donationItem) => total + donationItem.amount, 0);
 });
 
 donationSchema.virtual('donationId').get(function() {
@@ -41,7 +41,7 @@ donationSchema.statics.getCart = function(userId) {
 
 donationSchema.methods.addCharityToCart = async function(charityEIN) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem.donationItem._id.equals(charityEIN));
+		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityEIN));
 		if (donationItem) {
 				donationItem.amount += 1;
 		} else {
@@ -53,7 +53,7 @@ donationSchema.methods.addCharityToCart = async function(charityEIN) {
 
 donationSchema.methods.setDonateAmount = function(charityEIN, newAmount) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem.donationItem._id.equals(charityEIN));
+		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityEIN));
 		if (donationItem && newAmount <= 0) {
 				donationItem.remove();
 		} else if (donationItem) {

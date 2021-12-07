@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import * as donationsAPI from '../../utilities/donations-api';
 import NavBar from '../../components/NavBar/NavBar';
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -10,10 +10,20 @@ import DonationDetail from '../../components/DonationDetail/DonationDetail';
 import './NewDonationPage.css';
 
 export default function NewDonationPage({user, setUser}){
-		const [charity, setCharity] = useState({});
+  const [charity, setCharity] = useState(null);
 		const [charities, setCharities] = useState([]);
-		const [cart, setCart] = useState(null);
-		const navigate = useNavigate();
+		const [activeCharity, setActiveCharity] = useState(false);
+	 const [cart, setCart] = useState(null);
+ 	const navigate = useNavigate();
+
+		useEffect(function(){
+	 		async function getCart() {
+	 		const cart = await donationsAPI.getCart();
+	 		setCart(cart);
+	 		}
+	 		getCart();
+	 }, []);
+
 
 		async function handleAddToDonation(charityEIN) {
 				const updatedCart = await donationsAPI.addCharityToCart(charityEIN);
@@ -32,11 +42,30 @@ export default function NewDonationPage({user, setUser}){
 
 		return(
 				<main className="NewDonationPage">
-						<NavBar user={user} setUser={setUser}/>
-						<SearchBar charities={charities} setCharities={setCharities} />
-						<SearchResults charities={charities} setCharities={setCharities} SearchResultsItem={SearchResultsItem}/>
-						<CharityDetail charity={charity} handleAddToDonation={handleAddToDonation} />
-						<DonationDetail donation={cart} handleChangeAmount={handleChangeAmount} handleCheckout={handleCheckout}/>
+						<NavBar 
+								user={user} 
+								setUser={setUser}
+						/>
+						<SearchBar 
+								charities={charities} 
+								setCharities={setCharities} 
+						/>
+						<SearchResults 
+								charities={charities} 
+								setCharities={setCharities} 
+								SearchResultsItem={SearchResultsItem}
+								setCharity={setCharity}
+								setActiveCharity={setActiveCharity}
+						/>
+						{activeCharity && <CharityDetail 
+									charity={charity}
+						  	handleAddToDonation={handleAddToDonation}
+						/>}
+						<DonationDetail 
+								donation={cart} 
+								handleChangeAmount={handleChangeAmount} 
+								handleCheckout={handleCheckout}
+							/>
 				</main>
 		);
 }
