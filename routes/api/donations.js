@@ -7,10 +7,10 @@ router.get('/cart', donationsCtrl.cart);
 // GET /api/donations/history
 router.get('/history', donationsCtrl.history);
 // POST /api/donations/cart/donations/:ein
-router.post('/cart/donations/:ein', donationsCtrl.addToCart);
-// POST /api/donations/cart/checkout
-router.post('/cart/checkout', donationsCtrl.checkout);
+router.post('/cart/charities/:ein', donationsCtrl.addToCart);
 // POST /api/donations/cart/amount
 router.put('/cart/amount', donationsCtrl.setDonationAmountInCart);
+// POST /api/donations/cart/checkout
+router.post('/cart/checkout', donationsCtrl.checkout);
 
 module.exports = router;

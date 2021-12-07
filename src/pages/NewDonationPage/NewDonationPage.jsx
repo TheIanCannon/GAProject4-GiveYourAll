@@ -13,6 +13,7 @@ export default function NewDonationPage({user, setUser}){
   const [charity, setCharity] = useState(null);
 		const [charities, setCharities] = useState([]);
 		const [activeCharity, setActiveCharity] = useState(false);
+		const [selectedCharity, setSelectedCharity] = useState(null);
 	 const [cart, setCart] = useState(null);
  	const navigate = useNavigate();
 
@@ -20,13 +21,13 @@ export default function NewDonationPage({user, setUser}){
 	 		async function getCart() {
 	 		const cart = await donationsAPI.getCart();
 	 		setCart(cart);
-	 		}
+				}
 	 		getCart();
 	 }, []);
 
-
-		async function handleAddToDonation(charityEIN) {
-				const updatedCart = await donationsAPI.addCharityToCart(charityEIN);
+		async function handleAddToDonation(ein) {
+				console.log('look', ein);
+				const updatedCart = await donationsAPI.addCharityToCart(ein);
 				setCart(updatedCart);
 		}
 		
@@ -59,10 +60,14 @@ export default function NewDonationPage({user, setUser}){
 						/>
 						{activeCharity && <CharityDetail 
 									charity={charity}
+									setCharity={setCharity}
 						  	handleAddToDonation={handleAddToDonation}
+									selectedCharity={selectedCharity}
+									setSelectedCharity={setSelectedCharity}
 						/>}
 						<DonationDetail 
 								donation={cart} 
+
 								handleChangeAmount={handleChangeAmount} 
 								handleCheckout={handleCheckout}
 							/>

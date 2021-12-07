@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function SearchResultsItem({ein, setActiveCharity, setCharity, charity}){
-		const navigate = useNavigate();
-		
+export default function SearchResultsItem({charity, setCharity, setActiveCharity}){
+	
+	function handleClick(){
+			setActiveCharity(true);
+			setCharity(charity);
+	}
 
-		function handleClick(){
-				setCharity(charity);
-				navigate(`/donations/new`);
-				setActiveCharity(true);
-		}
-
-		return(
+	return(
    <div className="SearchResultsItem">
-     <button onClick={() => handleClick()} >
+     <button onClick={() => handleClick()}>
        <span className="CharityName">{charity.name}</span>
 							<br/><br/>
      </button>

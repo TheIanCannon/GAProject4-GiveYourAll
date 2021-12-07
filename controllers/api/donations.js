@@ -17,7 +17,7 @@ async function cart(req, res) {
 // Add an item to the cart
 async function addToCart(req, res) {
     const cart = await Donation.getCart(req.user._id);
-    await cart.addItemToCart(req.params.id);
+    await cart.addCharityToCart(req.params.ein);
     res.json(cart);
 }
 

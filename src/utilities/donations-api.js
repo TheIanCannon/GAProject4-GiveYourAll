@@ -6,12 +6,12 @@ export function getCart() {
   return sendRequest(`${BASE_URL}/cart`);
 }
 
-export function addCharityToCart(charityEIN) {
-  return sendRequest(`${BASE_URL}/cart/items/${charityEIN}`, 'POST');
+export function addCharityToCart(ein) {
+  return sendRequest(`${BASE_URL}/cart/charities/${ein}`, 'POST');
 }
 
-export function setDonationAmountInCart(charityEIN, newAmount) {
-  return sendRequest(`${BASE_URL}/cart/amount`, 'PUT', { charityEIN, newAmount });
+export function setDonationAmountInCart(ein, newAmount) {
+  return sendRequest(`${BASE_URL}/cart/amount`, 'PUT', { ein, newAmount });
 }
 
 export function checkout() {
