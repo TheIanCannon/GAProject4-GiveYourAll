@@ -6,11 +6,11 @@ const donationsCtrl = require('../../controllers/api/donations');
 router.get('/cart', donationsCtrl.cart);
 // GET /api/donations/history
 router.get('/history', donationsCtrl.history);
-// POST /api/donations/cart/items/:id
-router.post('/cart/items/:id', donationsCtrl.addToCart);
+// POST /api/donations/cart/donations/:ein
+router.post('/cart/donations/:ein', donationsCtrl.addToCart);
 // POST /api/donations/cart/checkout
 router.post('/cart/checkout', donationsCtrl.checkout);
-// POST /api/donations/cart/qty
-router.put('/cart/qty', donationsCtrl.setItemQtyInCart);
+// POST /api/donations/cart/amount
+router.put('/cart/amount', donationsCtrl.setDonationAmountInCart);
 
 module.exports = router;

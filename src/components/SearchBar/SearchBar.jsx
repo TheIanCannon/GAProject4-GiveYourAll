@@ -8,7 +8,7 @@ export default function SearchBar({setCharities}){
 		async function handleSubmit(evt){
 				evt.preventDefault();
 				let searchResults = await charityAPI.search(searchTerm);
-				searchResults=searchResults.filter((r)=>r.mission);
+				searchResults=searchResults.filter((r)=>r.mission && r.rating && r.cause);
 				setCharities(searchResults);
 		}
 
