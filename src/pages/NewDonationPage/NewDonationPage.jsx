@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as donationsAPI from '../../utilities/donations-api';
 import NavBar from '../../components/NavBar/NavBar';
@@ -10,6 +10,7 @@ import DonationDetail from '../../components/DonationDetail/DonationDetail';
 import './NewDonationPage.css';
 
 export default function NewDonationPage({user, setUser}){
+		const [charity, setCharity] = useState({});
 		const [charities, setCharities] = useState([]);
 		const [cart, setCart] = useState(null);
 		const navigate = useNavigate();
@@ -34,7 +35,7 @@ export default function NewDonationPage({user, setUser}){
 						<NavBar user={user} setUser={setUser}/>
 						<SearchBar charities={charities} setCharities={setCharities} />
 						<SearchResults charities={charities} setCharities={setCharities} SearchResultsItem={SearchResultsItem}/>
-						<CharityDetail handleAddToDonation={handleAddToDonation} />
+						<CharityDetail charity={charity} handleAddToDonation={handleAddToDonation} />
 						<DonationDetail donation={cart} handleChangeAmount={handleChangeAmount} handleCheckout={handleCheckout}/>
 				</main>
 		);

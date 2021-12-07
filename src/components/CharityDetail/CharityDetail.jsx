@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as charityAPI from '../../utilities/charities-api';
 import * as donationsAPI from '../../utilities/donations-api';
@@ -17,13 +17,13 @@ export default function CharityDetail({setCart, handleAddToDonation}){
 	 			if (!charity) return null;
 	}, []);
 
-	useEffect(function(){
+ useEffect(function(){
 				async function getCart() {
 				const cart = await donationsAPI.getCart();
 				setCart(cart);
 				}
 				getCart();
-	},[]);
+	}, []);
 	
 	return(
 			<div className="CharityDetails">

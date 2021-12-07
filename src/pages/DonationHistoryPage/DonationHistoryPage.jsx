@@ -1,3 +1,4 @@
+import React from 'react';
 import './DonationHistoryPage.css';
 
 export default function DonationHistoryPage(){

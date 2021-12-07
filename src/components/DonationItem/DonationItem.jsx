@@ -1,3 +1,4 @@
+import React from 'react';
 import './DonationItem.css';
 
 export default function DonationItem({ DonationItem, isPaid, handleChangeAmount}) {

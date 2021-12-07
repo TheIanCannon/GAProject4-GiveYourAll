@@ -1,5 +1,6 @@
-import './DonationDetail.css';
+import React from 'react';
 import DonationItem from '../DonationItem/DonationItem';
+import './DonationDetail.css';
 
 export default function DonationDetail({donation, handleChangeAmount, handleCheckout}) {
 		if (!donation) return null;
