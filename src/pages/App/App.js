@@ -14,7 +14,7 @@ export default function App() {
 							 <Routes> 
 						 			<Route path="/donations/new" element={<NewDonationPage user={user} setUser={setUser} />} />
 						  		<Route path="/donations" element={<DonationHistoryPage user={user} setUser={setUser} />} />
-						  		{/* <Route path ="/*" element={<Navigate to="/donations/new" />} /> */}
+						  		<Route path ="/*" element={<Navigate to="/donations/new" />} />
 								</Routes> 
 								: 
 								<AuthPage setUser = { setUser }/>

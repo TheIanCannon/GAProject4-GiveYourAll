@@ -2,16 +2,15 @@ import React, { useEffect } from 'react';
 import * as charityAPI from '../../utilities/charities-api';
 import './CharityDetail.css';
 
-export default function CharityDetail({charity, setSelectedCharity, handleAddToDonation}){
+export default function CharityDetail({charity, selectedCharity, setSelectedCharity, handleAddToDonation}){
 			
 		 useEffect(function(){
    		async function getCharity(){
-					console.log('This one', charity.EIN);
   			const char = await charityAPI.getByEIN(charity.EIN);
  		 	setSelectedCharity(char);
 					}
  				getCharity(charity);
-	  }, []);
+	  }, [charity]);
 
 	return(
 			<div className="CharityDetails">
@@ -21,7 +20,7 @@ export default function CharityDetail({charity, setSelectedCharity, handleAddToD
 							<h5>Rating: {charity.rating}</h5>
 							<h5>Mission: {charity.mission}</h5>
 							<h5>Website: {charity.URL}</h5>
-							<button className="btn-sm" onClick={() => handleAddToDonation(charity._id)}>
+							<button className="btn-sm" onClick={() => handleAddToDonation(selectedCharity._id)}>
 									Make a Donation
 							</button>
 							</div>	

@@ -17,14 +17,14 @@ async function cart(req, res) {
 // Add an item to the cart
 async function addToCart(req, res) {
     const cart = await Donation.getCart(req.user._id);
-    await cart.addCharityToCart(req.params.ein);
+    await cart.addCharityToCart(req.params.id);
     res.json(cart);
 }
 
 // Updates an item's qty in the cart
 async function setDonationAmountInCart(req, res) {
     const cart = await Donation.getCart(req.user._id);
-    await cart.setDonationAmount(req.body.ein, req.body.newAmount);
+    await cart.setDonationAmount(req.body.id, req.body.newAmount);
     res.json(cart);
 }
 

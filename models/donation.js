@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const charity=require('./charity');
+const charitySchema = require('./charitySchema');
 
 const donationItemSchema = new Schema({
-		amount:{type: Number, default: 1},
-		donationItem : charity
+		amount: { type: Number, default: 1 },
+		charity : charitySchema
 },{
 		timestamps: true,
-		toJSON: {virtuals: true}
 });
 
 const donationSchema = new Schema({
@@ -39,21 +38,25 @@ donationSchema.statics.getCart = function(userId) {
 		);
 };
 
-donationSchema.methods.addCharityToCart = async function(charityEIN) {
+donationSchema.methods.addCharityToCart = async function(charityId) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityEIN));
-		if (donationItem) {
-				donationItem.amount += 1;
+		console.log(cart,'cart');
+console.log(this,'this');
+		const donationItem = cart.donationItems.find(donationItem => donationItem._id.equals(charityId));
+console.log(donationItem, 'donationItem');
+  if (donationItem) {
+    donationItem.amount += 1;
 		} else {
-				const donationItem = await mongoose.model('Charity').findById(charityEIN);
+				const donationItem = await mongoose.model('Charity').findById(charityId);
+console.log('donationitem',donationItem);
 				cart.donationItems.push({donationItem});
 		}
 		return cart.save();
 };
 
-donationSchema.methods.setDonateAmount = function(charityEIN, newAmount) {
+donationSchema.methods.setDonateAmount = function(charityId, newAmount) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityEIN));
+		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityId));
 		if (donationItem && newAmount <= 0) {
 				donationItem.remove();
 		} else if (donationItem) {

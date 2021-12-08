@@ -22,6 +22,7 @@ export default function DonationDetail({donation, handleChangeAmount, handleChec
 										:
 										<span>New Donation</span>
 								}
+								<br/>
 								<span>{new Date(donation.updatedAt).toLocaleDateString()}</span>
 						</div>
 						<div className="Charity-Donation-Container">

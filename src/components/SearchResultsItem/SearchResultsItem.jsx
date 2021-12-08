@@ -5,15 +5,16 @@ export default function SearchResultsItem({charity, setCharity, setActiveCharity
 	
 	function handleClick(){
 			setActiveCharity(true);
-			setCharity(charity);
+			setCharity(charity);	
 	}
 
 	return(
    <div className="SearchResultsItem">
      <button onClick={() => handleClick()}>
        <span className="CharityName">{charity.name}</span>
-							<br/><br/>
+							<br/>
      </button>
+					<br/>
    </div>
   );
 }
