@@ -2,7 +2,7 @@ import React from 'react';
 import DonationItem from '../DonationItem/DonationItem';
 import './DonationDetail.css';
 
-export default function DonationDetail({donation, handleChangeAmount, handleCheckout}) {
+export default function DonationDetail({ donation, handleChangeAmount, handleCheckout }) {
 		if (!donation) return null;
 
 		const donationItems = donation.donationItems.map(charity =>
@@ -18,9 +18,9 @@ export default function DonationDetail({donation, handleChangeAmount, handleChec
 				<div className="DonationDetail">
 						<div className="Heading">
 								{donation.isPaid ?
-										<span>Donation<span className="smaller">{donation.donationId}</span></span>
+										<span>Donation Package<span className="smaller">{donation.donationId}</span></span>
 										:
-										<span>New Donation</span>
+										<span>New Donation Package</span>
 								}
 								<br/>
 								<span>{new Date(donation.updatedAt).toLocaleDateString()}</span>

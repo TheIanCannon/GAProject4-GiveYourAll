@@ -28,8 +28,6 @@ export default function NewDonationPage({user, setUser}){
 		async function handleAddToDonation(charityId) {
 				console.log('look', charityId);
 				const updatedCart = await donationsAPI.addCharityToCart(charityId);
-				console.log('charityid', charityId)
-				console.log('cart id', updatedCart);
 				setCart(updatedCart);
 				setActiveCharity(false);
 		}

@@ -7,7 +7,7 @@ const charitySchema = new Schema({
 		mission: {type: String},
 		URL: {type: String},
 		EIN: {type: String},
-}, {
+		}, {
 		timestamps: true
 });
 

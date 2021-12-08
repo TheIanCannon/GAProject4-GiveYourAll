@@ -6,8 +6,8 @@ export default function CharityDetail({charity, selectedCharity, setSelectedChar
 			
 		 useEffect(function(){
    		async function getCharity(){
-  			const char = await charityAPI.getByEIN(charity.EIN);
- 		 	setSelectedCharity(char);
+  			let choseChar = await charityAPI.getByEIN(charity.EIN);
+ 		 	setSelectedCharity(choseChar);
 					}
  				getCharity(charity);
 	  }, [charity]);

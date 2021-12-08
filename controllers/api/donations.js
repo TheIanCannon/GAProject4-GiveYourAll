@@ -21,10 +21,10 @@ async function addToCart(req, res) {
     res.json(cart);
 }
 
-// Updates an item's qty in the cart
+// Update the donation amount per charity in the cart
 async function setDonationAmountInCart(req, res) {
     const cart = await Donation.getCart(req.user._id);
-    await cart.setDonationAmount(req.body.id, req.body.newAmount);
+    await cart.setDonationAmount(req.body.charityId, req.body.newAmount);
     res.json(cart);
 }
 
