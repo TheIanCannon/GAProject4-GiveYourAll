@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 const charitySchema = require('./charitySchema');
 
 const donationItemSchema = new Schema({
-		amount: { type: Number, default: 1 },
+		amount: { type: Number, default: 5 },
 		charity : charitySchema
 },{
 		timestamps: true,
+		toJSON: { virtuals: true }
 });
 
 const donationSchema = new Schema({
@@ -39,20 +40,23 @@ donationSchema.statics.getCart = function(userId) {
 };
 
 donationSchema.methods.addCharityToCart = async function(charityId) {
-		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem._id.equals(charityId));
-  if (donationItem) {
-    donationItem.amount += 1;
+  const cart = this;
+  // If charity already in donationItems don't do anything
+  if (cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityId))) { 
+		return cart;
 		} else {
-				const donationItem = await mongoose.model('Charity').findById(charityId);
-				cart.donationItems.push({donationItem});
+  const donationItem = await mongoose.model('Charity').findById(charityId);
+  cart.donationItems.push({charity: donationItem});
+  return cart.save();
 		}
-		return cart.save();
 };
 
 donationSchema.methods.setDonationAmount = function(charityId, newAmount) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem._id.equals(charityId));
+		console.log('cart', cart);
+		console.log('this', this);
+		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityId));
+		console.log('donationItemAmount', donationItem.amount);
 		if (donationItem && newAmount <= 0) {
 				donationItem.remove();
 		} else if (donationItem) {
