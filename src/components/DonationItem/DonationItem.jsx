@@ -12,14 +12,14 @@ export default function DonationItem({ newAmount, donationItem, isPaid, handleCh
         {!isPaid &&
           <button
             className="btn-xs"
-            onClick={() => handleChangeQty(donationItem.charity._id, donationItem.amount - 1)}
+            onClick={() => handleChangeAmount(donationItem.charity._id, donationItem.amount - 1)}
           >−</button>
           }
-        <span>{donationItem.amount}</span>
+        <div>{donationItem.amount}</div>
         {!isPaid &&
           <button
             className="btn-xs"
-            onClick={() => handleChangeQty(donationItem.charity._id, donationItem.amount + 1)}
+            onClick={() => handleChangeAmount(donationItem.charity._id, donationItem.amount + 1)}
           >+</button>
         }
       </div>

@@ -19,5 +19,5 @@ export function checkout() {
 }
 
 export function getDonationHistory() {
-    return sendRequest(`${BASE_URL}/history`);
+    return sendRequest(`${BASE_URL}/donationsRecord`);
 }

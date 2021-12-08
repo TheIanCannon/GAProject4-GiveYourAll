@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css';
 
-export default function NavBar({NewDonationPage, DonationHistoryPage, user, setUser}) {
+export default function NavBar({NewDonationPage, DonationRecordPage, user, setUser}) {
 
 		const [showDonation, setShowDonation] = useState(true);
 
@@ -15,8 +15,8 @@ export default function NavBar({NewDonationPage, DonationHistoryPage, user, setU
   return (
     <div>
 						<span>Welcome, {user.name}</span>&nbsp;|&nbsp;
-			   <Link to="/orders/new" className="button btm-sm">Make a Donation</Link>&nbsp;|&nbsp;
-			   <Link to="/orders" className="button btm-sm">See Your Giving</Link>&nbsp;|&nbsp;
+			   <Link to="/donations/new" className="button btm-sm">Make a Donation</Link>&nbsp;|&nbsp;
+			   <Link to="/donations" className="button btm-sm">See Your Giving</Link>&nbsp;|&nbsp;
       <Link to="" onClick={()=> handleLogOut()}>Log Out</Link>&nbsp;|&nbsp;
       
     </div>

@@ -5,7 +5,7 @@ module.exports = {
     addToCart,
     setDonationAmountInCart,
     checkout,
-				history
+				donationsRecord,
 };
 
 // A cart is the unpaid order for a user
@@ -28,19 +28,16 @@ async function setDonationAmountInCart(req, res) {
     res.json(cart);
 }
 
-// Update the cart's isPaid property to true
 async function checkout(req, res) {
-    const cart = await Donation.getCart(req.user._id);
-    cart.isPaid = true;
-    await cart.save();
-    res.json(cart);
+  const cart = await Donation.getCart(req.user._id);
+  cart.isPaid = true;
+  await cart.save();
+  res.json(cart);
 }
 
-// Return the logged in user's paid order history
-async function history(req, res) {
-    // Sort most recent orders first
-    const donations = await Donation
-        .find({ user: req.user._id, isPaid: true })
-        .sort('-updatedAt').exec();
-    res.json(donations);
+async function donationsRecord(req, res) {
+  const donations = await Donation
+  .find({ user: req.user._id, isPaid: true })
+  .sort('-updatedAt').exec();
+  res.json(donations);
 }

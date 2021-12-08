@@ -53,10 +53,7 @@ donationSchema.methods.addCharityToCart = async function(charityId) {
 
 donationSchema.methods.setDonationAmount = function(charityId, newAmount) {
 		const cart = this;
-		console.log('cart', cart);
-		console.log('this', this);
 		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityId));
-		console.log('donationItemAmount', donationItem.amount);
 		if (donationItem && newAmount <= 0) {
 				donationItem.remove();
 		} else if (donationItem) {

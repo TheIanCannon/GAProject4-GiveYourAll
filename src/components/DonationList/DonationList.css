@@ -1,0 +1,20 @@
+import React from 'react';
+import OrderListItem from "../../components/OrderListItem/OrderListItem";
+
+
+
+export default function OrderList({orders, activeOrder, handlePaidOrder}) {
+    const prevOrder = orders.map(order => <OrderListItem 
+        order={order} 
+        activeOrder ={activeOrder}
+        handlePaidOrder = {handlePaidOrder}
+        />);
+    
+      return (
+        <div>
+          {prevOrder}
+        </div>
+
+      );
+}
+
