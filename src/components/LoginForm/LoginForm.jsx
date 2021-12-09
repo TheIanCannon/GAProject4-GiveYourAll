@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import './LoginForm.css';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -36,7 +37,7 @@ export default function LoginForm({ setUser }) {
 										<br/><br/>
           <input type="password" name="password" placeholder="Password" value={credentials.password} onChange={handleChange} required />
 										<br/><br/>
-										<button type="submit">LOG IN</button>
+										<button className="LoginButton" type="submit">Log In</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>

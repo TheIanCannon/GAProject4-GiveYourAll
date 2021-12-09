@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
-import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
   // class field syntax
@@ -40,15 +39,15 @@ export default class SignUpForm extends Component {
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
 												<br/>
-            <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.handleChange} required />
+            <input type="text" Name="name" placeholder="Name" value={this.state.name} onChange={this.handleChange} required />
 												<br/><br/>
-            <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} required />
+            <input type="email" Name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} required />
             <br/><br/>
-												<input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} required />
+												<input type="password" Name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} required />
 												<br/><br/>
-            <input type="password" name="confirm" placeholder="Confirm Password" value={this.state.confirm} onChange={this.handleChange} required />
+            <input type="password" Name="confirm" placeholder="Confirm Password" value={this.state.confirm} onChange={this.handleChange} required />
             <br/><br/>
-												<button type="submit" disabled={disable}>Sign Up</button>
+												<button name="SignUpButton" type="submit" disabled={disable}>Sign Up</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>

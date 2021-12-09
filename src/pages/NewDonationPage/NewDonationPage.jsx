@@ -51,13 +51,6 @@ export default function NewDonationPage({user, setUser}){
 								charities={charities} 
 								setCharities={setCharities} 
 						/>
-						<SearchResults 
-								charities={charities} 
-								setCharities={setCharities} 
-								SearchResultsItem={SearchResultsItem}
-								setCharity={setCharity}
-								setActiveCharity={setActiveCharity}
-						/>
 						{activeCharity && <CharityDetail 
 									charity={charity}
 									setCharity={setCharity}

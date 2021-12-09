@@ -1,0 +1,19 @@
+.NavBar {
+		margin-top: 5vmin;
+		height: 7.5vh;
+		color: #0066cc;
+		background-color:rgb(255, 240, 190);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		border-radius: 2vmin;
+		border: 0.25vmin green solid;		
+}
+
+.Logo {
+		padding: 2vmin;
+		scale: 50%;
+		border-radius: 50%;
+		border: solid green 1vmin;
+		background-color:rgb(255, 240, 190);
+}

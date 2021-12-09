@@ -9,7 +9,8 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(getUser());
 		return ( 
-				<main className = "App"> 
+				
+				<main className = "App" > 
 						{ user ? 
 							 <Routes> 
 						 			<Route path="/donations/new" element={<NewDonationPage user={user} setUser={setUser} />} />
@@ -18,7 +19,7 @@ export default function App() {
 								</Routes> 
 								: 
 								<AuthPage setUser = { setUser }/>
-						}  
+						}
 				</main>
   );
 }

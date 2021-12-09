@@ -13,7 +13,7 @@ export default function CharityDetail({charity, selectedCharity, setSelectedChar
 	  }, []);
 
 	return(
-			<div className="CharityDetails">
+			<div className="CharityDetail">
 							{ charity? <div>
 							<h4>{charity.name}</h4>
 							<h5>Cause: {charity.cause}</h5>

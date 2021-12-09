@@ -1,4 +1,51 @@
-.form-container{
-color: grey;
-background: blue;
+.AuthPage {
+ 	position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	 height: 100%;
+  display: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AuthBox {
+		background-color:rgba(255, 240, 190,0.5);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding-bottom: 13vh;
+		width: 25vw;
+		height: 25vh;
+  border:seagreen solid 0.5vmin;
+		border-radius: 1vmin;
+}
+
+.AppTitle {
+		-webkit-text-stroke: 0.5px brown;
+		color: rgb(255, 213, 73);
+}
+
+.SignLogButton {
+
+	border: solid 0.375vmin green;
+	
+}
+
+button {
+		background: white;
+		border: solid 0.375vmin green;
+		border-radius: 0.5vmin;
+}
+
+input {
+		text-align: center;
+		background: white;
+		border: solid 0.375vmin green;
+		border-radius: 1vmin;
 }

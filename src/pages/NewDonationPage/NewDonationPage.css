@@ -1,0 +1,29 @@
+.NavBar{
+		position: fixed;
+		justify-self: center;
+		width: 90vw;
+}
+
+.NewDonationPage{
+		height: 100%;
+		display: grid;
+		grid-template-columns: 3fr 0.5fr 3fr 0.5fr 3fr;
+		grid-template-rows: 1fr;
+		justify-content: space-between;
+}
+
+.SearchBar{
+		margin-top: 15vmin;
+}
+
+.CharityDetail{
+		margin-top: 15vmin;
+  border: solid green 0.5vmin;
+		background-color:rgb(255, 240, 190);
+}
+
+.DonationDetail{
+		margin-top: 15vmin;
+  border: solid green 0.5vmin;
+		background-color:rgb(255, 240, 190);
+}

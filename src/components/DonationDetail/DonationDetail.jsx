@@ -22,7 +22,7 @@ export default function DonationDetail({ donation, handleChangeAmount, handleChe
 										:
 										<span>New Donation Package</span>
 								}
-								<br/>
+								<br/><br/>
 								<span>{new Date(donation.updatedAt).toLocaleDateString()}</span>
 						</div>
 						<div className="Charity-Donation-Container">
@@ -42,7 +42,7 @@ export default function DonationDetail({ donation, handleChangeAmount, handleChe
 												</section>
 										</>
 										:
-										<div className="Give">Give 'Til It Hurts!</div>
+										<div className="Give"><br/>Give 'Til It Hurts!</div>
 								}
 						</div>
 				</div>

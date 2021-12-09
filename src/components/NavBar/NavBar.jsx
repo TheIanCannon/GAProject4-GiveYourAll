@@ -10,9 +10,12 @@ export default function NavBar({NewDonationPage, DonationRecordPage, user, setUs
 		}
   return (
     <header className="NavBar">
-					 ◈&nbsp;<span>Welcome, {user.name}</span>&nbsp;◈&nbsp;<Link to="/donations/new" className="button btm-sm">Make a Donation</Link>&nbsp;◈&nbsp;
+						<br/>
+					 <span>Welcome, {user.name}</span>&nbsp;◈&nbsp;
+						<Link to="/donations/new" className="button btm-sm">Make a Donation</Link>
+						<img className="Logo" src="https://i.imgur.com/q8e9ujq.png"/>
 			   <Link to="/donations" className="button btm-sm">See Your Giving</Link>&nbsp;◈&nbsp;
-      <Link to="" onClick={()=> handleLogOut()}>Log Out</Link>&nbsp;◈
+      <Link to="" onClick={()=> handleLogOut()}>Log Out</Link>
       <br/>
 						<br/>
     </header>

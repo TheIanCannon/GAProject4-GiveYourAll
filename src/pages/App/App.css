@@ -1,3 +1,13 @@
+body {
+    background: url(https://i.imgur.com/uviboRN.jpg?1) no-repeat center center fixed;
+				-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .App {
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+		justify-content: center;
 }
