@@ -11,7 +11,7 @@ Coincidentally developed near the end-of-year holidays, this app provides the ab
 *Languages* HTML, CSS, JS<br>
 *Framework* Node, ReactJS<br>
 *Platforms* MongoDB, Heroku<br>
-*Resources* Imgur, DesignEvo logo maker<br>
+*Resources* CharityNavigator API, Imgur, DesignEvo logo maker<br>
 
 # Getting Started
 
