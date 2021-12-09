@@ -1,4 +1,5 @@
 const Donation = require('../../models/donation');
+const Charity = require('../../models/charity');
 
 module.exports = {
     cart,
@@ -21,11 +22,12 @@ async function addToCart(req, res) {
     res.json(cart);
 }
 
-// Update the donation amount per charity in the cart
+// Update the donation amount for a given charity in the cart
 async function setDonationAmountInCart(req, res) {
     const cart = await Donation.getCart(req.user._id);
+				console.log(req.body);
     await cart.setDonationAmount(req.body.charityId, req.body.newAmount);
-    res.json(cart);
+				res.json(cart);
 }
 
 async function checkout(req, res) {

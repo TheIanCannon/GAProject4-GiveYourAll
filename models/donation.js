@@ -19,17 +19,17 @@ const donationSchema = new Schema({
   toJSON: { virtuals: true }
 });
 
-donationSchema.virtual('donationTotal').get(function() {
-  return this.donationItems.reduce((total) => total += total, 0);
-});
+// donationSchema.virtual('donationTotal').get(function() {
+//   return this.donationItems.reduce((total) => total + charity.amount, 0);
+// });
 
-donationSchema.virtual('totalAmount').get(function() {
-  return this.donationItems.reduce((total) => total += total, 0);
-});
+// donationSchema.virtual('totalAmount').get(function() {
+//   return this.donationItems.reduce((total) => total + charity.amount, 0);
+// });
 
-donationSchema.virtual('donationId').get(function() {
-  return this.id.slice(-6).toUpperCase();
-});
+// donationSchema.virtual('donationId').get(function() {
+//   return this.id.slice(-6).toUpperCase();
+// });
 
 donationSchema.statics.getCart = function(userId) {
 		return this.findOneAndUpdate(
@@ -53,7 +53,8 @@ donationSchema.methods.addCharityToCart = async function(charityId) {
 
 donationSchema.methods.setDonationAmount = function(charityId, newAmount) {
 		const cart = this;
-		const donationItem = cart.donationItems.find(donationItem => donationItem.charity._id.equals(charityId));
+  const donationItem = cart.donationItems.find(donationItem => donationItem._id.equals(charityId));
+		console.log(donationItem);
 		if (donationItem && newAmount <= 0) {
 				donationItem.remove();
 		} else if (donationItem) {

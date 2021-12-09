@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as donationsAPI from '../../utilities/donations-api';
 import DonationDetail from '../../components/DonationDetail/DonationDetail';
 import DonationList from '../../components/DonationList/DonationList';
+import NavBar from '../../components/NavBar/NavBar';
 import './DonationRecordPage.css';
 
 export default function DonationRecordPage({ user, setUser }) {
@@ -25,7 +26,8 @@ export default function DonationRecordPage({ user, setUser }) {
 
   return (
     <main className="DonationRecordPage">
-      <DonationList
+      <NavBar user={user} setUser={setUser}/>
+						<DonationList
         donations={donations}
         activeDonation={activeDonation}
         handlePaidDonation={handlePaidDonation}

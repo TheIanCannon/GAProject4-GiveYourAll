@@ -3,9 +3,9 @@ require('dotenv').config();
 require('./config/database');
 
 // Require the Mongoose models
-const Charity = require('./models/Charity');
+const Charity = require('./models/charity');
 const User = require('./models/user');
-//const Order = require('./models/order');
+const Donation = require('./models/donation');
 
 // Local variables will come in handy for holding retrieved documents
 let user, charity, order;

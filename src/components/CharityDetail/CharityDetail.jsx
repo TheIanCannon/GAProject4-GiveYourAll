@@ -10,7 +10,7 @@ export default function CharityDetail({charity, selectedCharity, setSelectedChar
  		 	setSelectedCharity(choseChar);
 					}
  				getCharity(charity);
-	  }, [charity]);
+	  }, []);
 
 	return(
 			<div className="CharityDetails">

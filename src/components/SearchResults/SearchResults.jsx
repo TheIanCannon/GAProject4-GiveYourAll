@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import SearchResultsItem from '../SearchResultsItem/SearchResultsItem';
+import './SearchResults.css';
 
 export default function SearchResults({setActiveCharity, setCharity, charities}){
 		

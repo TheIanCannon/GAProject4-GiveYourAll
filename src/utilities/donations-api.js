@@ -10,8 +10,9 @@ export function addCharityToCart(charityId) {
   return sendRequest(`${BASE_URL}/cart/charities/${charityId}`, 'POST');
 }
 
-export function setDonationAmountInCart(CharityId, newAmount) {
-  return sendRequest(`${BASE_URL}/cart/amount`, 'PUT', { CharityId, newAmount });
+export function setDonationAmountInCart(charityId, newAmount) {
+		console.log('DONATIONS-API', 'charityId:', charityId, 'newAmount:', newAmount);
+  return sendRequest(`${BASE_URL}/cart/amount`, 'PUT', { charityId, newAmount });
 }
 
 export function checkout() {

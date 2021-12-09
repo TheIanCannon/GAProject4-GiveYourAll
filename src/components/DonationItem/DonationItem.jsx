@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './DonationItem.css';
 
-export default function DonationItem({ newAmount, donationItem, isPaid, handleChangeAmount}) {
+export default function DonationItem({ donationItem, isPaid, handleChangeAmount}) {
 
 		return(
 				<div className="DonationItem">
@@ -12,15 +12,15 @@ export default function DonationItem({ newAmount, donationItem, isPaid, handleCh
         {!isPaid &&
           <button
             className="btn-xs"
-            onClick={() => handleChangeAmount(donationItem.charity._id, donationItem.amount - 1)}
-          >−</button>
+            onClick={() => handleChangeAmount(donationItem._id, donationItem.amount + 1)}
+											>+</button>
           }
-        <div>{donationItem.amount}</div>
+        <div>${donationItem.amount}.00</div>
         {!isPaid &&
           <button
             className="btn-xs"
-            onClick={() => handleChangeAmount(donationItem.charity._id, donationItem.amount + 1)}
-          >+</button>
+            onClick={() => handleChangeAmount(donationItem._id, donationItem.amount - 1)}
+          >-</button>
         }
       </div>
 			 </div>
