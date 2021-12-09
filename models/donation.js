@@ -19,17 +19,17 @@ const donationSchema = new Schema({
   toJSON: { virtuals: true }
 });
 
-// donationSchema.virtual('donationTotal').get(function() {
-//   return this.donationItems.reduce((total) => total + charity.amount, 0);
-// });
+ donationSchema.virtual('donationTotal').get(function() {
+   return this.donationItems.reduce((total, donationItem) => total + donationItem.amount, 0);
+ });
 
-// donationSchema.virtual('totalAmount').get(function() {
-//   return this.donationItems.reduce((total) => total + charity.amount, 0);
-// });
+ donationSchema.virtual('totalAmount').get(function() {
+   return this.donationItems.reduce((total, donationItem) => total + donationItem.amount, 0);
+ });
 
-// donationSchema.virtual('donationId').get(function() {
-//   return this.id.slice(-6).toUpperCase();
-// });
+ donationSchema.virtual('donationId').get(function() {
+   return this.id.slice(-6).toUpperCase();
+ });
 
 donationSchema.statics.getCart = function(userId) {
 		return this.findOneAndUpdate(
