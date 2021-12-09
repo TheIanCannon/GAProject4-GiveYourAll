@@ -11,7 +11,7 @@ export default function DonationList({donations, activeDonation, handlePaidDonat
         />);
     
       return (
-        <div>
+        <div className="DonationRecords">
           {donationRecord}
         </div>
 

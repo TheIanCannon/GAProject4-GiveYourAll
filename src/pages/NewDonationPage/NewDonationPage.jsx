@@ -47,6 +47,7 @@ export default function NewDonationPage({user, setUser}){
 								user={user} 
 								setUser={setUser}
 						/>
+						
 						<div className="Search">
 						<SearchBar 
 								charities={charities} 
@@ -60,6 +61,8 @@ export default function NewDonationPage({user, setUser}){
 												setActiveCharity={setActiveCharity}
 						 			/>
 						</div>
+						<div className="Gap"></div>
+						<div className="CharityInfoBox">
 						{activeCharity && <CharityDetail 
 									charity={charity}
 									setCharity={setCharity}
@@ -67,12 +70,16 @@ export default function NewDonationPage({user, setUser}){
 									selectedCharity={selectedCharity}
 									setSelectedCharity={setSelectedCharity}
 						/>}
+						</div>
+						<div className="Gap"></div>
+						<div className="DonationBox">
 						<DonationDetail 
 								donation={cart} 		
 								charity={charity}						
 								handleChangeAmount={handleChangeAmount} 
 								handleCheckout={handleCheckout}
 							/>
+						</div>
 				</main>
 		);
 }

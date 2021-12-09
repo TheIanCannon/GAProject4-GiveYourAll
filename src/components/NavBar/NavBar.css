@@ -1,4 +1,5 @@
 .NavBar {
+		justify-self: center;
 		margin-top: 5vmin;
 		height: 5vh;
 		color: green;
@@ -6,8 +7,8 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		border-radius: 2vmin;
-		border: 0.25vmin green solid;		
+		border-radius: 1vmin;
+		border: 0.375vmin green solid;		
 }
 
 .Logo {

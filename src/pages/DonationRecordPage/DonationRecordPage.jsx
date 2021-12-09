@@ -27,12 +27,22 @@ export default function DonationRecordPage({ user, setUser }) {
   return (
     <main className="DonationRecordPage">
       <NavBar user={user} setUser={setUser}/>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						<div className="ListAndDetail">
 						<DonationList
         donations={donations}
         activeDonation={activeDonation}
         handlePaidDonation={handlePaidDonation}
       />
 						<DonationDetail/>
+						</div>
     </main>
   );
 }

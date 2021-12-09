@@ -15,12 +15,13 @@ export default function CharityDetail({charity, selectedCharity, setSelectedChar
 	return(
 			<div className="CharityDetail">
 							<h3>Charity Details</h3>
-							{ charity? <div>
+							{ charity ? <div>
 							<h4>{charity.name}</h4>
-							<h5>Cause: {charity.cause}</h5>
-							<h5>Rating: {charity.rating}</h5>
-							<h5>Mission: {charity.mission}</h5>
-							<h5>Website: {charity.URL}</h5>
+							<h5>Cause:</h5><div>{charity.cause}</div>
+							<h5>Rating:</h5><div>{charity.rating}</div>
+							<h5>Mission:</h5><div>{charity.mission}</div>
+							<h5>Website:</h5><div>{charity.URL}</div>
+							<br/>
 							<button className="btn-sm" onClick={() => handleAddToDonation(selectedCharity._id)}>
 									Make a Donation
 							</button>
