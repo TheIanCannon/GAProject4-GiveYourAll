@@ -39,8 +39,6 @@ export default function DonationRecordPage({ user, setUser }) {
         donations={donations}
         activeDonation={activeDonation}
         handlePaidDonation={handlePaidDonation}
-								donationItems={donationItems}
-								donationItem={donationItem}
       />
 						<DonationDetail
 						/>
