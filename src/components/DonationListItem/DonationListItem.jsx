@@ -7,8 +7,9 @@ export default function DonationListItem({donation, donationItem, donationItems}
   
 		return(
 				<div className = "DonationList">
+						<br/>
 						<div>Donation Id: {amountId}</div>
-						<br/><div>{donationItems.map}</div>
+						<br/>
 						<div>{new Date(donation.updatedAt).toLocaleDateString()}</div>
 						<br/> 
 						<div>${totalAmount}</div>
