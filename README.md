@@ -9,8 +9,8 @@ Coincidentally developed near the end-of-year holidays, this app provides the ab
 
 # Technologies Used
 *Languages* HTML, CSS, JS<br>
-*Framework* ReactJS<br>
-*Platforms* Heroku<br>
+*Framework* Node, ReactJS<br>
+*Platforms* MongoDB, Heroku<br>
 *Resources* Imgur, DesignEvo logo maker<br>
 
 # Getting Started
@@ -33,3 +33,5 @@ Coincidentally developed near the end-of-year holidays, this app provides the ab
 2. Add a secondary "one-shot" donation option to follow the subscription-adjustment.
 
 3. Add a second API which will randomly display an inspirational quote based on giving, charity, and similar principles.
+
+4. Improve mobile-friendly design (largely by CSS).
