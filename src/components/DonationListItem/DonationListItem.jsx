@@ -11,7 +11,7 @@ export default function DonationListItem({donation, donationItem}) {
 						<br/> 
 						<div>{new Date(donation.updatedAt).toLocaleDateString()}</div>
 						<br/> 
-						<div>$ {totalAmount} .00</div>
+						<div>${totalAmount}</div>
 				</div>
 		);
 }
