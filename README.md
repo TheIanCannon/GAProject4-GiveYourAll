@@ -1,74 +1,35 @@
-# MERN-Stack Infrastructure
+# Give Your All
+Coincidentally developed near the end-of-year holidays, this app provides the ability to search for charities and causes to make donations by accessing a charity API—providing anonymity in giving by working through an intermediary and thus avoiding all those pesky emails, texts, calls, and letters.
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+**Screenshots**
+![Landing Page](https://i.imgur.com/Rsyf3mu.png)<br>
+![Signup / Login](https://i.imgur.com/gX8oNH0.png)<br>
+![Donation Page](https://i.imgur.com/rMGIs7b.png)<br>
+![Landing Page Screenshot](https://i.imgur.com/yGJeeHV.png)<br>
 
-# Getting Started with Create React App
+# Technologies Used
+*Languages* HTML, CSS, JS<br>
+*Framework* ReactJS<br>
+*Platforms* Heroku<br>
+*Resources* Imgur, DesignEvo logo maker<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started
 
-## Available Scripts
+[Give Your All](http://giveyourall.herokuapp.com "GiveYourAll")<br>
+[Trello](https://trello.com/b/eaIztHJ3/giveyourall "Trello")<br>
 
-In the project directory, you can run:
+1. Upon visiting the site, the user is able to create an account using a name, email address, and password.
 
-### `npm start`
+2. The user is then able to log in, where they can search the API for a list of charities to donate to. Charity details include the name, rating, cause and mission, along with a URL for the organization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. The user can then choose to add a charity to a donation-package list, and adjust the amount of funds to be sent to the charity. Charities can also be deleted from the package before it is finalized.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. After finalizing the order, the user can also look up their own donation records, each listing info on the package: the id, amount donated, and date.
 
-### `npm test`
+# Next Steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Edit the donation packages in the user's record, treating the donation package as a subscription model.
 
-### `npm run build`
+2. Add a secondary "one-shot" donation option to follow the subscription-adjustment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Add a second API which will randomly display an inspirational quote based on giving, charity, and similar principles.
