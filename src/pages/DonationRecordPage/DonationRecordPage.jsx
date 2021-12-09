@@ -9,7 +9,6 @@ export default function DonationRecordPage({ user, setUser }) {
   
   const [donations, setDonations] = useState([]);
   const [activeDonation, setActiveDonation] = useState(null);
-
   
   useEffect(function () {
     async function getDonationRecords() {
@@ -40,8 +39,11 @@ export default function DonationRecordPage({ user, setUser }) {
         donations={donations}
         activeDonation={activeDonation}
         handlePaidDonation={handlePaidDonation}
+								donationItems={donationItems}
+								donationItem={donationItem}
       />
-						<DonationDetail/>
+						<DonationDetail
+						/>
 						</div>
     </main>
   );
