@@ -16,6 +16,7 @@ export default function DonationDetail({ donation, handleChangeAmount, handleChe
 
 		return (
 				<div className="DonationDetail">
+					<br/>
 						<div className="Heading">
 								{donation.isPaid ?
 										<span>Donation Package<span className="smaller">{donation.donationId}</span></span>

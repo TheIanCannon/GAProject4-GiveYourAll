@@ -9,6 +9,7 @@ export default function SearchResultsItem({charity, setCharity, setActiveCharity
 
 	return(
    <div className="SearchResultsItem">
+					<br/>		
      <button onClick={() => handleClick()}>
        <span className="CharityName">{charity.name}</span>
 							<br/>

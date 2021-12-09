@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import * as charityAPI from "../../utilities/charities-api";
-import SearchResults from '../SearchResults/SearchResults';
 import './SearchBar.css';
 
-export default function SearchBar({charities, setCharities, SearchResultsItem, setCharity, setActiveCharity}){
+export default function SearchBar({setCharities}){
 
 		const [searchTerm, setSearchTerm] = useState("");
 
@@ -27,13 +26,6 @@ export default function SearchBar({charities, setCharities, SearchResultsItem, s
 										</div>
 								</form>
 						</div>
-						<SearchResults 
-								charities={charities} 
-								setCharities={setCharities} 
-								SearchResultsItem={SearchResultsItem}
-								setCharity={setCharity}
-								setActiveCharity={setActiveCharity}
-						 />
 				</div>	
 		);
 }

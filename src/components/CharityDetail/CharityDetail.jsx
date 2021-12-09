@@ -14,6 +14,7 @@ export default function CharityDetail({charity, selectedCharity, setSelectedChar
 
 	return(
 			<div className="CharityDetail">
+							<h3>Charity Details</h3>
 							{ charity? <div>
 							<h4>{charity.name}</h4>
 							<h5>Cause: {charity.cause}</h5>

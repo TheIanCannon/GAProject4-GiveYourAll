@@ -6,12 +6,18 @@ export default function SearchResults({setActiveCharity, setCharity, charities})
 		
 		return(
 				<div className="SearchResults">
-						<ul className="EachResult">
-								{charities.map((charity, key) => (
-										<SearchResultsItem setActiveCharity={setActiveCharity} setCharity={setCharity} charity={charity} key={key}/>
-								))} 
-						</ul>
-			</div>
+								{charities? 
+										<ul className="EachResult">
+												{charities.map((charity, key) => (
+														<SearchResultsItem setActiveCharity={setActiveCharity} setCharity={setCharity} charity={charity} key={key}/>
+												))} 
+										</ul>
+										:
+									 <div>
+										Find A Charity!
+										</div>
+										}
+				</div>
 		);
 
 }

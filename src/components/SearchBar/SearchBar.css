@@ -1,10 +1,4 @@
-.SearchBar{
- border: 0.375vmin solid green;
-	border-radius: 1vmin;
-	margin-left: 4.5vmin;
-	background-color:rgb(255, 240, 190);
-	height: 75vh;
-}
+
 
 .form-control {
 		margin-top: 1vmin;

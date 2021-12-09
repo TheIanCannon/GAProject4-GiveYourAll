@@ -47,10 +47,19 @@ export default function NewDonationPage({user, setUser}){
 								user={user} 
 								setUser={setUser}
 						/>
+						<div className="Search">
 						<SearchBar 
 								charities={charities} 
 								setCharities={setCharities} 
 						/>
+      <SearchResults 
+												charities={charities} 
+												setCharities={setCharities} 
+												SearchResultsItem={SearchResultsItem}
+												setCharity={setCharity}
+												setActiveCharity={setActiveCharity}
+						 			/>
+						</div>
 						{activeCharity && <CharityDetail 
 									charity={charity}
 									setCharity={setCharity}

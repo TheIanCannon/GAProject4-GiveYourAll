@@ -12,18 +12,41 @@
 		justify-content: space-between;
 }
 
-.SearchBar{
+.form-control {
+		margin-top: 1vmin;
+		margin-right: 1vmin;
+	 border: 0.375vmin solid green;
+}
+
+.Search{
+		margin-left: 8.5vmin;
 		margin-top: 15vmin;
+	 border: 0.375vmin solid green;
+		border-radius: 2vmin;
+		background-color:rgb(255, 240, 190);
+}
+
+.SearchBar{
+		margin-top: 2vh;
+		width: 25vw;
+}
+
+.SearchResults{
+		align-content: center;
 }
 
 .CharityDetail{
 		margin-top: 15vmin;
-  border: solid green 0.5vmin;
+		width: 25vw;
+  border: solid green 0.375vmin;
 		background-color:rgb(255, 240, 190);
+		border-radius: 1vmin;
 }
+
 
 .DonationDetail{
 		margin-top: 15vmin;
   border: solid green 0.5vmin;
 		background-color:rgb(255, 240, 190);
+		margin-left: 19vmin;
 }

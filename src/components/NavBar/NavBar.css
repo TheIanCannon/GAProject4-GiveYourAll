@@ -1,7 +1,7 @@
 .NavBar {
 		margin-top: 5vmin;
-		height: 7.5vh;
-		color: #0066cc;
+		height: 5vh;
+		color: green;
 		background-color:rgb(255, 240, 190);
 		display: flex;
 		justify-content: space-around;
@@ -14,6 +14,6 @@
 		padding: 2vmin;
 		scale: 50%;
 		border-radius: 50%;
-		border: solid green 1vmin;
+		border: solid green 0.5vmin;
 		background-color:rgb(255, 240, 190);
 }
