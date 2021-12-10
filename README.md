@@ -9,7 +9,7 @@ Coincidentally developed near the end-of-year holidays, this app provides the ab
 
 # Technologies Used
 *Languages* HTML, CSS, JS<br>
-*Framework* Node, ReactJS<br>
+*Framework* ExpressJS, NodeJS, ReactJS<br>
 *Platforms* MongoDB, Heroku<br>
 *Resources* CharityNavigator API, Imgur, DesignEvo logo maker<br>
 
