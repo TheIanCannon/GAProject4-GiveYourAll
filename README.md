@@ -2,10 +2,9 @@
 Coincidentally developed near the end-of-year holidays, this app provides the ability to search for charities and causes to make donations by accessing a charity API—providing anonymity in giving by working through an intermediary and thus avoiding all those pesky emails, texts, calls, and letters.
 
 **Screenshots**
-![Landing Page](https://i.imgur.com/Rsyf3mu.png)<br>
-![Signup / Login](https://i.imgur.com/gX8oNH0.png)<br>
-![Donation Page](https://i.imgur.com/rMGIs7b.png)<br>
-![Landing Page Screenshot](https://i.imgur.com/yGJeeHV.png)<br>
+![Landing / Signup / Login Page](https://i.imgur.com/gX8oNH0.png)<br>
+![Search Page](https://i.imgur.com/rMGIs7b.png)<br>
+![Donation Page](https://i.imgur.com/yGJeeHV.png)<br>
 
 # Technologies Used
 *Languages* HTML, CSS, JS<br>
