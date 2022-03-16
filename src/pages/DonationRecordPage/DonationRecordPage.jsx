@@ -41,6 +41,7 @@ export default function DonationRecordPage({ user, setUser }) {
         handlePaidDonation={handlePaidDonation}
       />
 						<DonationDetail
+
 						/>
 						</div>
     </main>
