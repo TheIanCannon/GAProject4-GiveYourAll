@@ -8,7 +8,7 @@ collated into packages), providing anonymity to the donor in giving by working t
 
 ![Signup / Login](https://i.imgur.com/gX8oNH0.png)<br>
 
-![Donation Page](https://i.imgur.com/rMGIs7b.png)<br>
+![Donation Page](https://i.imgur.com/C5rtB7N.png)<br>
 
 ![Landing Page Screenshot](https://i.imgur.com/yGJeeHV.png)<br>
 
