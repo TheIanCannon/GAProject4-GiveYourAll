@@ -6,11 +6,12 @@ collated into packages), providing anonymity to the donor in giving by working t
 
 ##Screenshots##
 
-![Signup / Login](https://i.imgur.com/gX8oNH0.png)<br>
+![Landing Page](https://i.imgur.com/Rjp88Zx.jpg)<br>
 
-![Donation Page](https://i.imgur.com/C5rtB7N.png)<br>
+![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png)<br>
 
-![Landing Page Screenshot](https://i.imgur.com/yGJeeHV.png)<br>
+![Records Page](https://i.imgur.com/0RkGW9k.jpg)<br>
+
 
 
 ## Technologies Used ##
