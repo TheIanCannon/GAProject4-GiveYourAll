@@ -1,13 +1,12 @@
 # Give Your All #
 Developed from an interest in charity, this app lets a user search for charities and causes to make donations. It accesses a charity API, and collates and tracks user donations. Only the user and site administrator may access the user’s data. The app can be connected to Stripe or another financial technology tools. The app's administrator can collect donations to forward onto nominated charities. This intermediary provides anonymity to the user/donor.
-
+  
 |Screenshots||
 |----------------------|-|
 |Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg?1)|
 |Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png?1)|
 |Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg?1)|
-
-
+  
 |Technologies Used|-|
 |-|-|
 |**Languages**|HTML, CSS, JS|
@@ -18,8 +17,7 @@ Developed from an interest in charity, this app lets a user search for charities
 |**API**|CharityNavigator|
 |**Image Hosting**|Imgur|
 |**Other**|Logo created with DesignEvo software|
-
-
+  
 ## Get Started ##
 [Give Your All](http://giveyourall.herokuapp.com "GiveYourAll")<br>
 [Trello](https://trello.com/b/eaIztHJ3/giveyourall "Trello")<br>
