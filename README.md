@@ -6,6 +6,7 @@ Developed from an interest in charity, this app lets a user search for charities
 |Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg?1)|
 |Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png?1)|
 |Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg?1)|
+|-|-|
 
 |Technologies Used|-|
 |-|-|
@@ -17,6 +18,7 @@ Developed from an interest in charity, this app lets a user search for charities
 |**API**|CharityNavigator|
 |**Image Hosting**|Imgur|
 |**Other**|Logo created with DesignEvo software|
+|-|-|
 
 ## Get Started ##
 [Give Your All](http://giveyourall.herokuapp.com "GiveYourAll")<br>
