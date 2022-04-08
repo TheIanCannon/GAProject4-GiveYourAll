@@ -3,9 +3,9 @@ Developed from an interest in charity, this app lets a user search for charities
 
 |Screenshots||
 |----------------------|-|
-|Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg)|
-|Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png)|
-|Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg)|
+|Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg?1)|
+|Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png?1)|
+|Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg?1)|
 
 |Technologies Used|-|
 |-|-|
