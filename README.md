@@ -20,8 +20,9 @@ Developed from an interest in charity, this app lets a user search for charities
 |**Other**|Logo created with DesignEvo software|  
 
 ## Get Started ##
-[Give Your All](http://giveyourall.herokuapp.com "GiveYourAll")  
-[Trello](https://trello.com/b/eaIztHJ3/giveyourall "Trello")  
+### [Give Your All](http://giveyourall.herokuapp.com "GiveYourAll") ###  
+### [Trello](https://trello.com/b/eaIztHJ3/giveyourall "Trello") ###  
+
 **1.** Create an account using a name, password, and email address.  
 **2.** Search the API for a list of charities to donate to. Charity details include the name, rating, cause and mission, along with a direct URL for the organization.  
 **3.** Select a charity to add to a donation‐package list. Charities may also be deleted from the package before finalizing.  
