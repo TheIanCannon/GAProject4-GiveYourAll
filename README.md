@@ -1,4 +1,4 @@
-#Give Your All#
+#Give Your All#<br>
 Developed from an interest in charity, this app lets a user search for charities and causes to make donations. It accesses a charity API, and collates and tracks user donations. Only the user and site administrator may access the user’s data. The app can be connected to Stripe or another financial technology tools. The app's administrator can collect donations to forward onto nominated charities. This intermediary provides anonymity to the user/donor.
 
 |Screenshots||
