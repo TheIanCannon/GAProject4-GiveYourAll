@@ -7,7 +7,8 @@ Developed from an interest in charity, this app lets a user search for charities
 |Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png)|
 |Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg)|
 
-|## Technologies Used ##|-|
+|Technologies Used|-|
+|-|-|
 |**Languages**|HTML, CSS, JS|
 |**Framework**|ExpressJS|
 |**Environment**|NodeJS|
