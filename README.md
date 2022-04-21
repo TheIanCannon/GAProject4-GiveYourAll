@@ -3,11 +3,12 @@ Developed from an interest in charity, this app lets a user search for charities
 
 |Screenshots||
 |----------------------|-|
-|Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg?1)|
-|Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png?1)|
-|Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg?1)|  
+|Landing Page|![Landing Page](https://i.imgur.com/Rjp88Zx.jpg?2)|
+|Search/Donation Page|![Search/Donation Page](https://i.imgur.com/1Tpv3xK.png?2)|
+|Records Page|![Records Page](https://i.imgur.com/0RkGW9k.jpg?2)|  
   
-
+<br>
+  
 |Technologies Used||
 |-|-|
 |**Languages**|HTML, CSS, JS|
